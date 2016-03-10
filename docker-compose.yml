@@ -1,0 +1,9 @@
+putio:
+  image: "nouchka/putio"
+  container_name: putio
+  environment:
+    - RSYNC_REPO=putio
+    - RSYNC_SERVER=rsyncd.server.lan
+    - RSYNC_USER=rsync-user
+    - RSYNC_PASSWORD=rsync-password
+    - PUTIO_KEY=TOKEN123456

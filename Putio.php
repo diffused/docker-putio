@@ -38,7 +38,7 @@ function downloadDir($parentId=0, $parent=""){
 downloadDir();
 
 ##Clean directory if nothing to DL
-if(count($files) == "0"){
+if(count($files) == "1"){
 	shell_exec('rm -rf '.$root.'/*');
 }
 ?>

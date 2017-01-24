@@ -4,3 +4,4 @@ sut:
   entrypoint: /bin/true
   environment:
     - PUTIO_KEY=TOKEN123456
+    - DEBUG=true

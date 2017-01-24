@@ -22,6 +22,7 @@ Version follows putio api version
 This image is a debian jessie image with php cli support. Library uses for putio is https://github.com/nicoSWD/put.io-api-v2
 The script download all files from putio with the same directories. If there is no files on putio it removes everything in the directory. Then if a rsync server has been configured, it will sync the directory.
 If you don't use rsync, just mount /root/download/ directory.
+You will need an oauth token access; the process is described by https://put.io/v2/docs/gettingstarted.html
 
 # Use
 

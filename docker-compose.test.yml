@@ -1,5 +1,6 @@
-putio:
-  image: "nouchka/putio"
+sut:
+  build: .
   container_name: putio
+  entrypoint: /bin/true
   environment:
     - PUTIO_KEY=TOKEN123456

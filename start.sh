@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ ! "$DEBUG" ] || return
+[ ! "$DEBUG" ] || exit 0
 if [ ! "$PUTIO_KEY" ]; then
 	echo "Environment variable PUTIO_KEY missing"
 	exit 0

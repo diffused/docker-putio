@@ -12,5 +12,5 @@ if [ "$RSYNC_SERVER" ]; then
 	PASSWORD_FILE=/tmp/.rsync
 	echo $RSYNC_PASSWORD > $PASSWORD_FILE
 	chmod 400 $PASSWORD_FILE
-	rsync -rzvP --size-only --password-file=$PASSWORD_FILE /root/download/$PUTIO_ROOT_DIR $RSYNC_USER@$RSYNC_SERVER::$RSYNC_REPO/
+	rsync -rzvP --size-only --password-file=$PASSWORD_FILE /root/download/$PUTIO_ROOT_DIR/ $RSYNC_USER@$RSYNC_SERVER::$RSYNC_REPO/
 fi

@@ -54,6 +54,7 @@ downloadDir();
 
 ##Clean directory if nothing to DL
 if($clean){
+	echo "clean directory";
 	shell_exec('rm -rf '.$root.'/'.$putio_root_directory.'/*');
 }
 ?>

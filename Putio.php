@@ -32,7 +32,7 @@ function downloadFile($id, $dest, $size){
 }
 
 function downloadDir($parentId=0, $parent=""){
-	global $putio, $root, $putio_root_directory;
+	global $putio, $root, $putio_root_directory, $clean;
 	$files = $putio->files->listall($parentId);
 	foreach($files as $file){
 		$name = $file['name'];

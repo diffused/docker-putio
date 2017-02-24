@@ -8,6 +8,7 @@ $putio_root_directory = getenv('PUTIO_ROOT_DIR');
 if (!$putio_root_directory) {
 	$putio_root_directory = "";
 }
+$clean=true;
 
 // Retrieve a an array of files on your account.
 $files = $putio->files->listall();
@@ -44,6 +45,7 @@ function downloadDir($parentId=0, $parent=""){
 			downloadDir($file['id'], $parent.$name.'/');
 		}else if ($file['content_type'] != "application/x-directory"){
 			downloadFile($file['id'], $root."/".$parent.$name, $file['size']);
+			$clean=false;
 		}
 	}
 }
@@ -51,10 +53,7 @@ function downloadDir($parentId=0, $parent=""){
 downloadDir();
 
 ##Clean directory if nothing to DL
-$fi = new FilesystemIterator($root.'/'.$putio_root_directory, FilesystemIterator::SKIP_DOTS);
-$nbFiles = iterator_count($fi);
-echo $nbFiles." fichiers \n";
-if(count($nbFiles) == "0"){
+if($clean){
 	shell_exec('rm -rf '.$root.'/'.$putio_root_directory.'/*');
 }
 ?>

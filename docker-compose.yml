@@ -3,3 +3,4 @@ putio:
   container_name: putio
   environment:
     - PUTIO_KEY=TOKEN123456
+    - PUTIO_ROOT_DIR=download

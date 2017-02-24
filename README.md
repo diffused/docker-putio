@@ -35,6 +35,7 @@ or use with docker compose:
 Environment variables:
 
 	PUTIO_KEY=ACCESS_TOKEN
+	PUTIO_ROOT_DIR=directory (optionnal, specify a directory to filter)
 	RSYNC_REPO=putio
 	RSYNC_SERVER=rsyncd.server.lan
 	RSYNC_USER=rsync-user

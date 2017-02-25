@@ -36,7 +36,7 @@ function downloadDir($parentId=0, $parent=""){
 	$files = $putio->files->listall($parentId);
 	foreach($files as $file){
 		$name = $file['name'];
-		if($file['content_type'] == "application/x-directory" && startsWith($name, $parent.$putio_root_directory)){
+		if($file['content_type'] == "application/x-directory" && startsWith($name, $parent.'/'.$putio_root_directory)){
 			$dir=$root.'/'.$parent.$name;
 			if(!is_dir($dir)){
 				echo "\nmkdir |".$dir."|\n";

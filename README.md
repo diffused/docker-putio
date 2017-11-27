@@ -15,7 +15,7 @@
 
 Version follows putio api version
 
-* 2.0 (latest) (based on 2.0 branch)
+* 2.0 (latest) (based on master branch)
 
 # Image
 
